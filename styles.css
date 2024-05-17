@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.input-container {
+  position: relative;
+  padding: 10px 20px;
+  border: 4px dashed #7f8caf;
+  margin-bottom: 20px;
+}
+
+.input-container::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px dashed transparent;
+  pointer-events: none;
+  z-index: 1;
+  transition: border-color 0.3s ease; /* Added for smooth transition */
+}
+
+.input-container.dragover::after {
+  border-color: #007bff; /* Change border color when dragging over */
+}
+
+.input-container input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.file-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.view-box-container {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 120px);
+  max-height: 400px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.glyph {
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.unicode {
+  font-size: 24px; /* Increase font size for Unicode characters */
+}
+
+.index {
+  font-size: 12px; /* Decrease font size for glyph indexes */
+  color: #999; /* Adjust color for glyph indexes */
+}
+
+#footer {
+    text-align: center;
+    padding: 10px 0;
+}

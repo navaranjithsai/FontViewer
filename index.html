@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="input-container" id="inputContainer">
+        <input type="text" id="fontfromUrl" placeholder="Type or paste font URL">
+        <label for="fontFile" class="file-label">Or choose a font file:</label>
+        <input type="file" id="fontFile" accept=".ttf, .otf" class="file-input">
+    </div>
+    <div id="viewBoxContainer" class="view-box-container"></div>
+    <footer id="footer">Made with ❤ by Tech4File</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
